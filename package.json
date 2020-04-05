@@ -1,0 +1,15 @@
+{
+  "name": "roam-offline",
+  "version": "0.0.1",
+  "description": "Offline Roam",
+  "main": "index.js",
+  "dependencies": {
+    "electron": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "athul7744",
+  "license": "ISC"
+}
