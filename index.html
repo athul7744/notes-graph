@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Roam Offline</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/rhs-styles.css">
+    <link rel="stylesheet" href="src/css/default-styles.css">
+    <script src="src/utils/FieldHandler.js" defer></script>
+    <script src="src/utils/EditorHandler.js" defer></script>
+    <script src="src/utils/DatabaseHandler.js" defer></script>
+    <script src="src/utils/Router.js" defer></script>
+    <script src="src/utils/Logger.js" defer></script>
+    <script src="src/objects/Notes.js" defer></script>
+    <script src="src/objects/Fields.js" defer></script>
+    <script src="src/app/main.js" defer></script>
+</head>
+
+<body>
+    <div id="main-panel" class="main-panel">
+        <div id="rhs-panel" class="rhs-panel">
+            <div class="rhs-header rhs-border">
+                <span class="app-header">App Name</span>
+            </div>
+            <div class="rhs-component">
+                <span id="all-notes" title="All Notes" class="rhs-btn rhs-btn-normal">ALL NOTES</span>
+                <span id="add-new-note" title="New Note" class="rhs-btn rhs-btn-small">+</span>
+            </div>
+            <div></div>
+        </div>
+        <div class="center-panel">
+            <div id="editor"></div>
+        </div>
+        <div id="lhs-panel" style="display: inline-block;"></div>
+    </div>
+</body>
+</html>
