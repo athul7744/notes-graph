@@ -2,8 +2,17 @@
   "name": "roam-offline",
   "version": "0.0.1",
   "description": "Offline Roam",
-  "main": "main.js",
-  "dependencies": {},
+  "main": "app.js",
+  "dependencies": {
+    "@editorjs/editorjs": "^2.17.0",
+    "@editorjs/header": "^2.4.0",
+    "autosize": "^4.0.2",
+    "dexie": "^2.0.4",
+    "marked": "^0.8.2",
+    "showdown": "^1.9.1",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.4.2"
+  },
   "devDependencies": {
     "electron": "^8.2.0"
   },
