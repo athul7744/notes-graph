@@ -1,0 +1,53 @@
+.rhs-panel {
+    display: inline-block;
+    position: sticky;
+    top: 0px;
+    width: 19%;
+    max-width: 175px;
+    height: 100%;
+    background-color: #142850;
+    color: #5C7079;
+}
+
+.rhs-header {
+    margin: 10px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.rhs-component {
+    margin: 5px 0px;
+}
+
+.rhs-component:hover {
+    background-color: #27496d;
+    transition: all 0.5s;
+}
+
+.rhs-btn {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 7px 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.rhs-btn:hover {
+    color: aliceblue;
+    transition: all 0.5s;
+}
+
+.rhs-btn-normal {
+    width: 99px;
+    padding-left: 10px;
+}
+
+.rhs-btn-small {
+    width: 15px;
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.rhs-border {
+    border-bottom: 1px solid lightblue;
+}
