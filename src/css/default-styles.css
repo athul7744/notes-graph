@@ -1,0 +1,24 @@
+body {
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+}
+
+code {
+    margin-right: .2em;
+    border-radius: 4px;
+    color: #333;
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: .1em .3em;
+}
+
+p {
+    margin: 0px;
+}
+
+ul {
+    margin: 0px;
+    padding-left: 0px;
+}
+
