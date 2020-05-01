@@ -8,11 +8,11 @@ class SimpleTable {
 
     generateTable() {
         this.table = document.querySelector("table");
-        this.renderRow();
+        this.renderRows();
         this.renderTableHead();        
     }
 
-    renderRow() {
+    renderRows() {
         for (var obj of this.data) {
             var row = this.table.insertRow();
             for (var key of this.columns) {
