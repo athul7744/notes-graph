@@ -1,9 +1,9 @@
 class SimpleTable {
 
     constructor(config) {
-        this.holder = config.holder;
-        this.columns = config.columns;
-        this.data = config.data;
+        this.holder = document.getElementById(config.holder);
+        this.columns = (config.columns != undefined) ? config.columns : [];
+        this.data = (config.data != undefined ) ? config.data : [];
     }
 
     generateTable() {
