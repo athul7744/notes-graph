@@ -68,7 +68,7 @@ class EditorHandler {
         if (data.blocks.getBlocksCount() == 1){
             var block = data.blocks.getBlockByIndex(0);
             if(!block.children[0].children[0].classList.contains("title-style")){
-                editor.render(editorUtils.getInitData());
+                editorInstance.set();
             }
         }
     }
@@ -76,7 +76,7 @@ class EditorHandler {
     onReady() {
 
         this.editor.listeners.on(document.getElementById("add-new-note"), 'click', (e) => {
-            editorInstance.create();
+            editorInstance.set();
         });
         logger.log("EditorInstance onReady")
     }
