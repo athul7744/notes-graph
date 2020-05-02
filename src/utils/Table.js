@@ -7,9 +7,10 @@ class SimpleTable {
     }
 
     generateTable() {
-        this.table = document.querySelector("table");
+        this.table = document.createElement("table");
         this.renderRows();
         this.renderTableHead();        
+        this.holder.appendChild(this.table);
     }
 
     renderRows() {
