@@ -32,7 +32,7 @@ class EditorHandler {
      * @param {Object} data editor data 
      */
     create() {
-        if (this.note == undefined) {
+        if (this.note == null) {
             this.note = new Note();
             this.note.data = EditorHandler.getInitData(this.note.created_time);
         }
@@ -148,13 +148,13 @@ class EditorHandler {
 
     set(id) {
         if(id != null){
-        dbInstance.getByID(id).then( (notes) => {
-            this.note = notes[0];
-            this.create();
-        }).catch(err => {
-            logger.log('error',err.stack);
-        });
-    }
+            dbInstance.getByID(id).then( (notes) => {
+                this.note = notes[0];
+                this.create();
+            }).catch(err => {
+                logger.log('error',err.stack);
+            });
+        }
         else{
             this.note = null;
             this.create();
