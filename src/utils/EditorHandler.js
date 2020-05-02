@@ -146,12 +146,18 @@ class EditorHandler {
         });   
     }
 
-    async set(id) {
+    set(id) {
+        if(id != null){
         dbInstance.getByID(id).then( (notes) => {
             this.note = notes[0];
             this.create();
         }).catch(err => {
             logger.log('error',err.stack);
         });
+    }
+        else{
+            this.note = null;
+            this.create();
+        }
     }
 }
