@@ -1,4 +1,4 @@
-class SimpleRouter {
+class RenderUtil {
 
     /**
      * Variable to hold routes
@@ -32,10 +32,21 @@ class SimpleRouter {
      * @param {String} path name of path
      * @returns null
      */
-    goTo(path){
+    goTo(path) {
         if(this.#routes[path] != undefined){
             this.#routes[path]();
         }
+    }
+    /**
+     * Function to render main holder
+     * @param {String} id ID attribute of holder to be rendered
+     */
+    renderMainHolder(id) {
+        var holder = document.getElementById("center-panel");
+        holder.innerHTML = "";
+        var div = document.createElement("div");
+        div.id = id;
+        holder.appendChild(div);        
     }
 
 }
