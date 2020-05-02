@@ -6,7 +6,7 @@ const DailyRotateFile = require('winston-daily-rotate-file');
 const Dexie = require('dexie');
 
 var logger = new SimpleLogger();
-var router = new SimpleRouter();
+var renderer = new RenderUtil();
 var converter = new showdown.Converter();
 var fieldsInstance = new FieldHandler();
 var dbInstance = new DatabaseHandler();
