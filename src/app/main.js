@@ -17,12 +17,9 @@ renderer.register('editor', function () {
     editorInstance.set();
 });
 
-renderer.register('all_notes', function () {
+renderer.register('all_notes', async () => {
         renderer.renderMainHolder("notes-table");
-        var notes = [];
-        dbInstance.getDB().notes.toArray().then((e) => {
-            notes = e;
-        });
+        var notes = await dbInstance.getDB().notes.toArray();
         var conf = {
             holder: 'notes-table',
             columns: ['title', 'created_time', 'updated_time'],
