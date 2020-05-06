@@ -73,6 +73,10 @@ class EditorHandler {
         }
     }
 
+    /**
+     * Editor on ready function
+     * @returns null
+     */
     onReady() {
 
         this.editor.listeners.on(document.getElementById("add-new-note"), 'click', (e) => {
@@ -141,6 +145,10 @@ class EditorHandler {
         return 'block_' + Math.random().toString(36).substr(2, 9);
     }
 
+    /**
+     * Function that saves note to DB
+     * @returns null 
+     */
     async save() {
         var data = await this.editor.save();
         this.note.data = data;
@@ -150,6 +158,10 @@ class EditorHandler {
         });   
     }
 
+    /**
+     * Retrieves note from DB
+     * @param {Number} id ID of note to display 
+     */
     set(id) {
         if(id != null){
             dbInstance.getByID(id).then( (notes) => {
