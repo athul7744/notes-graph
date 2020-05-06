@@ -10,7 +10,7 @@ class SimpleTable {
         this.table = document.createElement("table");
         this.renderRows();
         this.renderTableHead();        
-        this.holder.appendChild(this.table);
+        this.holder.innerHTML = this.table.outerHTML;
     }
 
     renderRows() {
