@@ -1,5 +1,8 @@
 class Note {
 
+    /**
+     * @constructor
+     */
     constructor() {
         this.data = null;
         this.created_time = new Date().getTime();
@@ -8,6 +11,10 @@ class Note {
         this.title = '';
     }
 
+    /**
+     * Load note data
+     * @param {Object} obj Data to be loaded 
+     */
     load(obj) {
         this.data = obj.data;
         this.created_time = obj.created_time;
