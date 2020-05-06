@@ -23,4 +23,17 @@ class Note {
         this.linked_notes = obj.linked_notes;
         this.title = obj.data.blocks[0].data.text;
     }
+
+    /**
+     * Get formatted note data
+     * @returns {Object} Formatted object
+     */
+    getFormattedData() {
+        return {
+            title : this.title,
+            data : this.data,
+            created_time : new Date(this.created_time).toLocaleString(),
+            updated_time: (this.updated_time != null) ? new Date(this.created_time).toLocaleString():"-",
+        }
+    }   
 }
