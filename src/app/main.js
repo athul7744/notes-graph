@@ -19,10 +19,17 @@ renderer.register('editor', function () {
 
 renderer.register('all_notes', async () => {
         renderer.renderMainHolder("notes-table");
-        var notes = await dbInstance.getDB().notes.toArray();
+        var notesArray = await dbInstance.getDB().notes.toArray();
+        var notes = notesArray.map((obj) => {
+            return obj.getFormattedData();
+        });
         var conf = {
             holder: 'notes-table',
-            columns: ['title', 'created_time', 'updated_time'],
+            columns: [
+                {id:'title', name:'Title'}, 
+                {id:'created_time', name:'Created At'}, 
+                {id:'updated_time', name:'Updated At'}
+            ],
             data: notes
         };
         var table = new SimpleTable(conf);
