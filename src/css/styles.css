@@ -68,3 +68,7 @@ div.markdown::before, div[contenteditable="true"]::before {
     opacity: 0;
     height: 0px;
 }
+
+.hide {
+    display: none;
+}
