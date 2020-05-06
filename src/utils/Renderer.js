@@ -43,10 +43,20 @@ class RenderUtil {
      */
     renderMainHolder(id) {
         var holder = document.getElementById("center-panel");
-        holder.innerHTML = "";
-        var div = document.createElement("div");
-        div.id = id;
-        holder.appendChild(div);        
+        for(var i=0;i<holder.childNodes.length;i++){
+            if (holder.childNodes[i].id != id){
+                holder.childNodes[i].classList.add('hide');
+            }
+        }
+        var div = document.getElementById(id);
+        if(div == null){
+            div = document.createElement("div");
+            div.id = id;
+            holder.appendChild(div);        
+        }
+        else{
+            div.classList.remove('hide');
+        }
     }
 
 }
