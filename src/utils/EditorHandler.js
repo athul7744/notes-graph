@@ -141,6 +141,7 @@ class EditorHandler {
     async save() {
         var data = await this.editor.save();
         this.note.data = data;
+        this.note.title = data.blocks[0].data.text;
         dbInstance.store(this.note).then((e) => {
             logger.log("Stored successfully");
         });   
