@@ -18,7 +18,7 @@ class SimpleTable {
             var row = this.table.insertRow();
             for (var key of this.columns) {
                 var cell = row.insertCell();
-                var text = document.createTextNode(obj[key]);
+                var text = document.createTextNode(obj[key.id]);
                 cell.appendChild(text);
             };
         }
@@ -29,7 +29,7 @@ class SimpleTable {
         var th_row = thead.insertRow();
         for (var key of this.columns) {
             var th = document.createElement("th");
-            var text = document.createTextNode(key);
+            var text = document.createTextNode(key.name);
             th.appendChild(text);
             th_row.appendChild(th);
         };
