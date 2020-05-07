@@ -16,6 +16,7 @@ class SimpleTable {
      */
     generateTable() {
         this.table = document.createElement("table");
+        this.table.classList.add('table-style');
         this.renderRows();
         this.renderTableHead();        
         this.holder.innerHTML = this.table.outerHTML;
