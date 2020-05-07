@@ -1,7 +1,6 @@
 .center-panel {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 10px;
+    overflow: hidden;
+    padding-left: 10px;
     height: auto;
 }
 
