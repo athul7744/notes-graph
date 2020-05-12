@@ -17,22 +17,28 @@ renderer.register('editor', function () {
 });
 
 renderer.register('all_notes', async () => {
-        renderer.renderMainHolder("notes-table");
-        var notesArray = await dbInstance.getDB().notes.toArray();
-        var notes = notesArray.map((obj) => {
-            return obj.getFormattedData();
-        });
-        var conf = {
-            holder: 'notes-table',
-            columns: [
-                {id:'title', name:'Title'}, 
-                {id:'created_time', name:'Created At'}, 
-                {id:'updated_time', name:'Updated At'}
-            ],
-            data: notes
-        };
-        var table = new SimpleTable(conf);
-        table.generateTable();
+        if(renderer.renderMainHolder("notes-table", true)){
+            var notesArray = await dbInstance.getDB().notes.toArray();
+            var notes = notesArray.map((obj) => {
+                return obj.getFormattedData();
+            });
+            var conf = {
+                holder: 'notes-table',
+                header: 'All Notes',
+                columns: [
+                    {id:'title', name:'Title'}, 
+                    {id:'created_time', name:'Created At'}, 
+                    {id:'updated_time', name:'Updated At'}
+                ],
+                onclick : function(e,data){
+                    renderer.goTo('editor');
+                    editorInstance.setNote(data);
+                },
+                data: notes
+            };
+            global.notesTable = new SimpleTable(conf);
+            global.notesTable.generateTable();
+        }
     });
 
 renderer.goTo('editor');
