@@ -8,6 +8,8 @@ class SimpleTable {
         this.holder = document.getElementById(config.holder);
         this.columns = (config.columns != undefined) ? config.columns : [];
         this.data = (config.data != undefined ) ? config.data : [];
+        this.headerText = (config.header != undefined) ? config.header : "SimpleTable";
+        this.onclick = (config.onclick != undefined) ? config.onclick : () => {};
     }
 
     /**
