@@ -59,4 +59,18 @@ class SimpleTable {
             th_row.appendChild(th);
         };
     }
+
+    /**
+     * Function to attach row click events
+     * @returns null
+     */
+    attachEvents() {
+        for(var i=1; i<this.table.rows.length; i++){
+            var title = this.table.rows[i].cells[0];
+            var index = i;
+            title.onclick = (e) => {
+                this.onclick(e,this.data[index-1]);
+            };
+        }
+    }
 }
