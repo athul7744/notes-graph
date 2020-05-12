@@ -6,6 +6,7 @@ class EditorHandler {
     constructor(){
         this.editor = null;
         this.note = null;
+        logger.log("EditorHandler.js : EditorHandler initialized");
     }
 
     /**
@@ -37,9 +38,11 @@ class EditorHandler {
             this.note.data = EditorHandler.getInitData(this.note.created_time);
         }
         if(this.editor != null){
+            logger.log("EditorHandler.js : Rendering note");
             this.editor.render(this.note.data);
         }
         else{
+            logger.log("EditorHandler.js : Rendering note");
             this.editor = new EditorJS({
                 holder: 'editor',
                 tools: {
@@ -71,6 +74,7 @@ class EditorHandler {
                 editorInstance.set();
             }
         }
+        logger.log("EditorHandler.js : Data changed");
     }
 
     /**
@@ -85,7 +89,7 @@ class EditorHandler {
         this.editor.listeners.on(document.getElementById("all-notes"), 'click', (e) => {
             renderer.goTo('all_notes');
         });
-        logger.log("EditorInstance onReady")
+        logger.log("EditorHandler.js : Editor is Ready")
     }
 
     /**
@@ -110,6 +114,7 @@ class EditorHandler {
             block.input.focus();
             block.markdown.classList.add('hidden');
         });
+        logger.log("EditorHandler.js : Block events attached");
     }
 
     /**
@@ -121,6 +126,7 @@ class EditorHandler {
         block.input.removeEventListener('blur', () => {});
         block.input.removeEventListener('focus', () => {});
         block.markdown.removeEventListener('click', () => {});
+        logger.log("EditorHandler.js : Block events removed");
     }
 
     /**
@@ -154,7 +160,7 @@ class EditorHandler {
         this.note.data = data;
         this.note.title = data.blocks[0].data.text;
         dbInstance.store(this.note).then((e) => {
-            logger.log("Stored successfully");
+            logger.log("EditorHandler.js : Stored successfully");
         });   
     }
 

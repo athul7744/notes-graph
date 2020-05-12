@@ -11,6 +11,7 @@ class RenderUtil {
     constructor(){
         this.#routes = {};
         this.currentView = '';
+        logger.log("Renderer.js : Renderer object initialized");
     }
 
     /**
@@ -26,6 +27,7 @@ class RenderUtil {
         else{
             logger.log('Argument not a function')
         }
+        logger.log("Renderer.js : path registered for : "+path );
     }
 
     /**
@@ -35,6 +37,7 @@ class RenderUtil {
      */
     goTo(path) {
         if(this.#routes[path] != undefined){
+            logger.log("Renderer.js : rendering path : "+path);
             this.#routes[path]();
         }
     }
@@ -46,6 +49,7 @@ class RenderUtil {
      */
     renderMainHolder(id, destroy) {
         if (this.currentView == id){
+            logger.log("Renderer.js : Same view!");
             return false;
         }
         var holder = document.getElementById("center-panel");
@@ -67,6 +71,7 @@ class RenderUtil {
             div.innerHTML = "";
         }
         this.currentView = id;
+        logger.log("Renderer.js : Main holder id : "+id+" rendered");
         return true;
     }
 

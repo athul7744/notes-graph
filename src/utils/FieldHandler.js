@@ -7,6 +7,7 @@ class FieldHandler {
      */
     constructor(){
         this.#fields = [];
+        logger.log("FieldHandler.js : FieldHandler initialized");
     }
 
     /**
@@ -16,6 +17,8 @@ class FieldHandler {
      */
     add(field) {
         this.#fields.push(field);
+        logger.log("FieldHandler.js : Field added");
+        
     }
 
     /**
@@ -25,8 +28,10 @@ class FieldHandler {
      */
     get(index) {
         if(index >= this.#fields.length){
+            logger.log("FieldHandler.js : Field does not exist");
             return null;
         }
+        logger.log("FieldHandler.js : Getting field with index : "+index);
         return this.#fields[index];
     }
 
@@ -35,6 +40,7 @@ class FieldHandler {
      * @returns {Array} array of all fields
      */
     getAllFields() {
+        logger.log("FieldHandler.js : Get all fields");
         return this.#fields;
     }
     
@@ -43,6 +49,7 @@ class FieldHandler {
      * @param {Number} index Index of field to be deleted 
      */
     delete(index) {
+        logger.log("FieldHandler.js : Deleting field with index : "+index);
         return this.#fields.splice(index,1);
     }
 
@@ -51,6 +58,7 @@ class FieldHandler {
      * @returns null
      */
     clear(){
+        logger.log("FieldHandler.js : Deleting all fields");
         this.#fields = [];
     }
 }

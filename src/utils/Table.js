@@ -10,6 +10,7 @@ class SimpleTable {
         this.data = (config.data != undefined ) ? config.data : [];
         this.headerText = (config.header != undefined) ? config.header : "SimpleTable";
         this.onclick = (config.onclick != undefined) ? config.onclick : () => {};
+        logger.log("Table.js : Table object initialized");
     }
 
     /**
@@ -28,6 +29,7 @@ class SimpleTable {
         this.holder.appendChild(this.header);
         this.holder.appendChild(this.table);
         this.attachEvents();
+        logger.log("Table.js : Table generated");
     }
 
     /**
@@ -43,6 +45,7 @@ class SimpleTable {
                 cell.appendChild(text);
             };
         }
+        logger.log("Table.js : Table rows rendered");
     }
 
     /**
@@ -58,6 +61,7 @@ class SimpleTable {
             th.appendChild(text);
             th_row.appendChild(th);
         };
+        logger.log("Table.js : Table head rendered");
     }
 
     /**
@@ -72,5 +76,6 @@ class SimpleTable {
                 this.onclick(e,this.data[index-1]);
             };
         }
+        logger.log("Table.js : Table events attached");
     }
 }
