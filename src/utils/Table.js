@@ -17,11 +17,17 @@ class SimpleTable {
      * @returns null
      */
     generateTable() {
+        this.header = document.createElement("div");
+        this.header.classList.add('table-header');
+        this.header.innerHTML = "<span>"+this.headerText+"</span>";
         this.table = document.createElement("table");
         this.table.classList.add('table-style');
         this.renderRows();
-        this.renderTableHead();        
-        this.holder.innerHTML = this.table.outerHTML;
+        this.renderTableHead();
+        this.holder.classList.add('notes-table');        
+        this.holder.appendChild(this.header);
+        this.holder.appendChild(this.table);
+        this.attachEvents();
     }
 
     /**
