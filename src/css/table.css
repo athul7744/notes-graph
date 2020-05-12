@@ -1,3 +1,44 @@
 .table-style {
     width: 100%;
+    padding-top: 8px;
+    border-spacing: 0px;
+}
+
+.notes-table {
+    margin-top: 12px;
+    margin-left: 5px;
+    margin-right: 18px;
+}
+
+.table-header {
+    font-size: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+
+table {
+    border-collapse: separate;
+}
+
+thead {
+    text-align: left;
+    background: #A6E1FA;
+}
+
+th {
+    padding: 5px 5px;
+    margin-bottom: 2px;
+    font-weight: 100;
+    color: #00072D;
+}
+
+td {
+    padding: 5px 5px;
+    border-bottom: 1px solid #eee;
+}
+
+tr td {
+    cursor: pointer;
+    background: #F4FFFD;
+    font-size: 14px;
 }
