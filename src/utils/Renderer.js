@@ -10,6 +10,7 @@ class RenderUtil {
      */
     constructor(){
         this.#routes = {};
+        this.currentView = '';
     }
 
     /**
@@ -40,8 +41,13 @@ class RenderUtil {
     /**
      * Function to render main holder
      * @param {String} id ID attribute of holder to be rendered
+     * @param {Boolean} destroy remove elements inside ID 
+     * @returns {Boolean} true, if state changed
      */
-    renderMainHolder(id) {
+    renderMainHolder(id, destroy) {
+        if (this.currentView == id){
+            return false;
+        }
         var holder = document.getElementById("center-panel");
         for(var i=0;i<holder.childNodes.length;i++){
             if (holder.childNodes[i].id != id){
@@ -57,6 +63,11 @@ class RenderUtil {
         else{
             div.classList.remove('hide');
         }
+        if(destroy){
+            div.innerHTML = "";
+        }
+        this.currentView = id;
+        return true;
     }
 
 }
