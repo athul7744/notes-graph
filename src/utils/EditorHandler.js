@@ -176,4 +176,15 @@ class EditorHandler {
             this.create();
         }
     }
+
+    /**
+     * Displays editor using Note object
+     * @param {Note} note object containing note data
+     */
+    setNote(note) {
+        if(note != null){
+            this.note = note;
+            this.create();
+        }
+    }
 }
