@@ -13,8 +13,7 @@ var dbInstance = new DatabaseHandler();
 var editorInstance = new EditorHandler();
 
 renderer.register('editor', function () {
-    renderer.renderMainHolder("editor")
-    editorInstance.set();
+    renderer.renderMainHolder("editor", false);
 });
 
 renderer.register('all_notes', async () => {
@@ -37,4 +36,4 @@ renderer.register('all_notes', async () => {
     });
 
 renderer.goTo('editor');
-
+editorInstance.set();
