@@ -6,6 +6,7 @@ class EditorHandler {
     constructor(){
         this.editor = null;
         this.note = null;
+        this.mode = 'ADD';
         logger.log("EditorHandler.js : EditorHandler initialized");
     }
 
@@ -172,6 +173,7 @@ class EditorHandler {
         if(id != null){
             dbInstance.getByID(id).then( (notes) => {
                 this.note = notes[0];
+                this.mode = 'EDIT';
                 this.create();
             }).catch(err => {
                 logger.log('error',err.stack);
@@ -179,6 +181,7 @@ class EditorHandler {
         }
         else{
             this.note = null;
+            this.mode = 'ADD';
             this.create();
         }
     }
@@ -190,6 +193,7 @@ class EditorHandler {
     setNote(note) {
         if(note != null){
             this.note = note;
+            this.mode = 'EDIT';
             this.create();
         }
     }
