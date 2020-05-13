@@ -16,6 +16,15 @@
     padding-bottom: 5px;
 }
 
+.table-row {
+    background: #F4FFFD;
+}
+
+.table-row:hover {
+    background: #FDFDFC;
+    transition: all 0.5s;
+}
+
 table {
     border-collapse: separate;
 }
@@ -39,6 +48,5 @@ td {
 
 tr td {
     cursor: pointer;
-    background: #F4FFFD;
     font-size: 14px;
 }
