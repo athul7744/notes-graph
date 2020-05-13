@@ -71,11 +71,19 @@ class SimpleTable {
     attachEvents() {
         for(var i=1; i<this.table.rows.length; i++){
             var title = this.table.rows[i].cells[0];
-            var index = i;
-            title.onclick = (e) => {
-                this.onclick(e,this.data[index-1]);
-            };
+            title.onclick = this.createCallback(this.data[i-1],this.onclick);
         }
         logger.log("Table.js : Table events attached");
+    }
+
+    /**
+     * Function to create scoped callback for every row
+     * @param {Note} data 
+     * @param {Function} callback 
+     */
+    createCallback(data,callback) {
+        return function(e) {
+            callback(e,data)
+        };
     }
 }
