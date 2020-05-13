@@ -29,7 +29,12 @@ class Line {
         
         this.markdown.id = this.id + "-markdown";
         this.markdown.classList.add('markdown');
-        this.markdown.classList.add('hidden');
+        if(editorInstance.mode == 'EDIT'){
+            this.input.classList.add('hidden');    
+        }
+        else {
+            this.markdown.classList.add('hidden');
+        }
         this.markdown.innerHTML = editorInstance.getMarkDown(this.input.innerHTML);
         
         this.wrapper.classList.add("line-style");
