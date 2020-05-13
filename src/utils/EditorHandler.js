@@ -86,6 +86,7 @@ class EditorHandler {
 
         this.editor.listeners.on(document.getElementById("add-new-note"), 'click', (e) => {
             renderer.goTo('editor');
+            editorInstance.set(null);
         });
         this.editor.listeners.on(document.getElementById("all-notes"), 'click', (e) => {
             renderer.goTo('all_notes');
