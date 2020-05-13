@@ -4,6 +4,7 @@ class Note {
      * @constructor
      */
     constructor() {
+        this.id = null;
         this.data = null;
         this.created_time = new Date().getTime();
         this.updated_time = null;
