@@ -39,6 +39,7 @@ class SimpleTable {
     renderRows() {
         for (var obj of this.data) {
             var row = this.table.insertRow();
+            row.classList.add('table-row');
             for (var key of this.columns) {
                 var cell = row.insertCell();
                 var text = document.createTextNode(obj[key.id]);
