@@ -14,6 +14,11 @@ class DatabaseHandler {
         return this.#db.notes.put(data);
     }
 
+    delete(id) {
+        logger.log("DatabaseHandler.js : deleting note with ID : "+id);
+        return this.#db.notes.delete(id);
+    }
+
     getDB() {
         logger.log("DatabaseHandler.js : Returning DB");
         return this.#db;
