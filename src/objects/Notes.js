@@ -6,7 +6,7 @@ class Note {
     constructor() {
         this.id = null;
         this.data = null;
-        this.created_time = new Date().getTime();
+        this.created_time = Date.now();
         this.updated_time = null;
         this.linked_notes = [];
         this.title = '';
