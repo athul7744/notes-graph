@@ -30,6 +30,7 @@ class Note {
      */
     getFormattedData() {
         return {
+            id : this.id,
             title : this.title,
             data : this.data,
             created_time : new Date(this.created_time).toLocaleString(),
