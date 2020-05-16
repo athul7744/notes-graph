@@ -83,6 +83,16 @@ class EditorHandler {
                 this.set();
             }
         }
+        if(this.dataChanged){
+            if(this.saveTimeOut) {
+                clearTimeout(this.saveTimeOut);
+            }
+            this.saveTimeOut = setTimeout(function(){
+                if (!editorInstance.saving) {
+                    editorInstance.save()
+                }
+            },1200);
+        }
         logger.log("EditorHandler.js : Data changed");
     }
 
