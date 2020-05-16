@@ -80,7 +80,7 @@ class EditorHandler {
         if (data.blocks.getBlocksCount() == 1){
             var block = data.blocks.getBlockByIndex(0);
             if(!block.children[0].children[0].classList.contains("title-style")){
-                editorInstance.set();
+                this.set();
             }
         }
         logger.log("EditorHandler.js : Data changed");
