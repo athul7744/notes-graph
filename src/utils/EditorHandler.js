@@ -57,7 +57,9 @@ class EditorHandler {
                     title: Title
                 },
                 placeholder: "Title",
-                onChange: this.onChangeFunction,
+                onChange: function(data){
+                    editorInstance.onChangeFunction(data);
+                },
                 onReady: function () {
                     autosize(document.querySelectorAll('textarea'));
                     editorInstance.onReady();
