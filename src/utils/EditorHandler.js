@@ -7,6 +7,10 @@ class EditorHandler {
         this.editor = null;
         this.note = null;
         this.mode = 'ADD';
+        this.dataChanged = false;
+        this.saveTimeOut = null;
+        this.renderMarkdown = false;
+        this.saving = false;
         logger.log("EditorHandler.js : EditorHandler initialized");
     }
 
