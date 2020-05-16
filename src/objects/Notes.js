@@ -34,7 +34,7 @@ class Note {
             title : this.title,
             data : this.data,
             created_time : new Date(this.created_time).toLocaleString(),
-            updated_time: (this.updated_time != null) ? new Date(this.created_time).toLocaleString():"-",
+            updated_time: (this.updated_time != null) ? new Date(this.updated_time).toLocaleString():"-",
         }
     }   
 }
