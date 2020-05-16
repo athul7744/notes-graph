@@ -177,11 +177,23 @@ class EditorHandler {
      * @returns null 
      */
     async save() {
+        this.saving = true;
         var data = await this.editor.save();
         this.note.data = data;
         this.note.title = data.blocks[0].data.text;
+        if(this.mode == 'ADD') {
+            this.note.created_time = Date.now();
+        }
+        else {
+            this.note.updated_time = Date.now()
+        }
         dbInstance.store(this.note).then((e) => {
             logger.log("EditorHandler.js : Stored successfully");
+            if(editorInstance.mode == 'ADD'){
+                editorInstance.mode = 'EDIT';
+                editorInstance.note.id = e;
+            }
+            editorInstance.saving = false;
         });   
     }
 
