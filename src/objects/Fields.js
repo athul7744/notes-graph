@@ -14,6 +14,7 @@ class Line {
         this.input = document.createElement('div');
         this.markdown = document.createElement('div');
         this.title = false;
+        this.prev_data = "";
     }
 
     /**
