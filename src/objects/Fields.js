@@ -30,7 +30,7 @@ class Line {
         
         this.markdown.id = this.id + "-markdown";
         this.markdown.classList.add('markdown');
-        if(editorInstance.mode == 'EDIT'){
+        if(editorInstance.renderMarkdown){
             this.input.classList.add('hidden');    
         }
         else {
