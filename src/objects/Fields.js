@@ -55,8 +55,14 @@ class Line {
      */
     updated() {
         
-        var data = this.save().text;
-        this.markdown.innerHTML = editorInstance.getMarkDown(data);
+        var data = this.save();
+        if( data && data.text){
+            if(this.prev_data != data.text){
+                this.prev_data = data.text;
+                editorInstance.dataChanged = true;
+                this.markdown.innerHTML = editorInstance.getMarkDown(data.text);
+            }
+        }
     }
 
     /**
