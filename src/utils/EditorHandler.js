@@ -226,6 +226,7 @@ class EditorHandler {
         if(note != null){
             this.note = note;
             this.mode = 'EDIT';
+            this.renderMarkdown = true;
             this.create();
         }
     }
