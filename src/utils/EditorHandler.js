@@ -44,7 +44,9 @@ class EditorHandler {
         }
         if(this.editor != null){
             logger.log("EditorHandler.js : Rendering note");
-            this.editor.render(this.note.data);
+            this.editor.render(this.note.data).then(() => {
+                editorInstance.renderMarkdown = false;
+            });
         }
         else{
             logger.log("EditorHandler.js : Rendering note");
@@ -88,6 +90,7 @@ class EditorHandler {
      */
     onReady() {
 
+        this.renderMarkdown = false;
         this.editor.listeners.on(document.getElementById("add-new-note"), 'click', (e) => {
             renderer.goTo('editor');
             editorInstance.set(null);
