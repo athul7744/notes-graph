@@ -2,7 +2,7 @@
     box-sizing: border-box;
     position: relative;
     display: inline-block;
-    transform: scale(var(--ggs,1));
+    transform: scale(0.90);
     width: 10px;
     height: 12px;
     border: 2px solid transparent;
