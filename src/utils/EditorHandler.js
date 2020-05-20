@@ -215,6 +215,21 @@ class EditorHandler {
             }
         }
     }
+
+    /**
+     * Remove storage icon
+     * @returns null
+     */
+    resetLoading() {
+        var elem = document.getElementById("editor-status");
+        if (elem != null) {
+            if (elem.classList.contains("storing")) {
+                elem.classList.add("loaded");
+                elem.classList.remove("storing");
+            }
+        }   
+    }
+
     /**
      * Function that saves note to DB
      * @returns null 
