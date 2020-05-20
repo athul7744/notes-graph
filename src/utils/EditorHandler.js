@@ -98,6 +98,7 @@ class EditorHandler {
                 }
             },1200);
         }
+        this.setLoading();
         logger.log("EditorHandler.js : Data changed");
     }
 
@@ -256,6 +257,7 @@ class EditorHandler {
                 editorInstance.mode = 'EDIT';
                 editorInstance.note.id = e;
             }
+            editorInstance.resetLoading();
             editorInstance.saving = false;
         });   
     }
