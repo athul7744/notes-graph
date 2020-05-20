@@ -173,6 +173,35 @@ class EditorHandler {
     }
 
     /**
+     * Function to render top bar
+     * @returns null
+     */
+    renderTopBar() {
+        
+        var div = document.createElement("div");
+        div.id = "editor-top-bar";
+        
+        var status = document.createElement("span");
+        var ico = document.createElement("i");
+        ico.classList.add("gg-disc");
+        status.id = "editor-status";
+        status.classList.add("loaded");
+        status.appendChild(ico);
+        div.appendChild(status);
+        
+        var del = document.createElement("span");
+        var btn = document.createElement("span");
+        var icon = document.createElement("i");
+        del.id = "delete-span";
+        btn.innerText = "Delete";
+        icon.classList.add("gg-trash");
+        del.appendChild(icon);
+        del.appendChild(btn);
+        div.appendChild(del);
+        
+        return div;
+    }
+    /**
      * Function that saves note to DB
      * @returns null 
      */
