@@ -63,6 +63,57 @@ div.markdown::before, div[contenteditable="true"]::before {
     padding: 0px;
 }
 
+#editor-top-bar {
+    height: 20px;
+    margin-top: 10px;
+}
+
+#editor-status {
+    float: left;
+    padding-left: 10px;
+    padding-top: 7px;
+}
+
+#delete-span {
+    float: right;
+    margin-right: 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 8px;
+    padding: 6px;
+    color: #232323;
+    font-size: 14px;
+    background: #eeeeee;
+    cursor: pointer;
+    user-select: none;
+}
+
+#delete-span:hover {
+    background: #ececec;
+    color: #333333;
+    transition: 0.2s all;
+}
+
+#delete-span:active {
+    background-color: #e01a4f;
+    border: 1px solid #e01a4f;
+    color: #efefef;
+    transition: 0.1s all;
+}
+
+#delete-span:active .gg-trash {
+    color: #eeeeee;
+}
+
+.storing .gg-disc {
+    color: #d69e2e;
+    transition: 0.5s all;
+}
+
+.loaded .gg-disc {
+    color: #38a169;
+    transition: 0.5s all;
+}
+
 .hidden {
     opacity: 0;
     height: 0px;
