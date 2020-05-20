@@ -50,6 +50,11 @@ class EditorHandler {
         }
         else{
             logger.log("EditorHandler.js : Rendering note");
+            var holder = document.getElementById(renderer.currentView);
+            holder.appendChild(this.renderTopBar());
+            var editorHolder = document.createElement("div");
+            editorHolder.id = "editor";
+            holder.appendChild(editorHolder); 
             this.editor = new EditorJS({
                 holder: 'editor',
                 tools: {
