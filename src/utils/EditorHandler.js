@@ -201,6 +201,20 @@ class EditorHandler {
         
         return div;
     }
+
+    /**
+     * Set loading icon
+     * @returns null
+     */
+    setLoading() {
+        var elem = document.getElementById("editor-status");
+        if (elem != null) {
+            if (elem.classList.contains("loaded")){
+                elem.classList.remove("loaded");
+                elem.classList.add("storing");
+            }
+        }
+    }
     /**
      * Function that saves note to DB
      * @returns null 
