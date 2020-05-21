@@ -263,6 +263,19 @@ class EditorHandler {
     }
 
     /**
+     * Function to delete current note
+     * @returns null 
+     */
+    delete() {
+        if(this.mode == "EDIT") {
+           dbInstance.delete(this.note.id).then( (e) => {
+               logger.log("EditorHandler.js : Deleted note");
+               editorInstance.set(null);
+           });  
+        }
+    }
+
+    /**
      * Retrieves note from DB
      * @param {Number} id ID of note to display 
      */
