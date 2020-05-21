@@ -160,6 +160,7 @@ class EditorHandler {
 
     /**
      * Function to attach editor events
+     * @returns null
      */
     attachEditorEvents() {
         var elem = document.getElementById("delete-span");
