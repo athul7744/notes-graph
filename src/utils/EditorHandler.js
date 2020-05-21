@@ -46,6 +46,7 @@ class EditorHandler {
             logger.log("EditorHandler.js : Rendering note");
             this.editor.render(this.note.data).then(() => {
                 editorInstance.renderMarkdown = false;
+                editorInstance.attachEditorEvents();
             });
         }
         else{
@@ -116,6 +117,7 @@ class EditorHandler {
         this.editor.listeners.on(document.getElementById("all-notes"), 'click', (e) => {
             renderer.goTo('all_notes');
         });
+        editorInstance.attachEditorEvents();
         logger.log("EditorHandler.js : Editor is Ready")
     }
 
@@ -154,6 +156,16 @@ class EditorHandler {
         block.input.removeEventListener('focus', () => {});
         block.markdown.removeEventListener('click', () => {});
         logger.log("EditorHandler.js : Block events removed");
+    }
+
+    /**
+     * Function to attach editor events
+     */
+    attachEditorEvents() {
+        var elem = document.getElementById("delete-span");
+        elem.onclick = () => {
+            editorInstance.delete();
+        }
     }
 
     /**
