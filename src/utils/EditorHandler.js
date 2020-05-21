@@ -97,7 +97,7 @@ class EditorHandler {
                 if (!editorInstance.saving) {
                     editorInstance.save()
                 }
-            },1200);
+            },2200);
         }
         this.setLoading();
         logger.log("EditorHandler.js : Data changed");
