@@ -1,6 +1,6 @@
 {
   "name": "note-graph",
-  "version": "0.0.1",
+  "version": "0.5.0",
   "description": "Linked Note taking App",
   "main": "app.js",
   "dependencies": {
