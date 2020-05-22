@@ -19,6 +19,10 @@
   "scripts": {
     "start": "electron ."
   },
-  "author": "athul7744",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athul7744/notes-graph.git"
+  },
+  "author": "Athul Anil Kumar <athul7744@outlook.com>",
   "license": "ISC"
 }
