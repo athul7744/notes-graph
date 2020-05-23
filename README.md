@@ -1,6 +1,6 @@
 # Notesgraph
 
-Bidirectionally linked crossplatform note-taking app based on [Electron](https://github.com/electron/electron)
+Cross-platform bidirectionally linked note-taking app based on [Electron](https://github.com/electron/electron)
 
 *Work In Progress*
 
