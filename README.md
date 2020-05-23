@@ -1,5 +1,4 @@
 # Notesgraph
----
 
 Bidirectionally Linked note taking app
 
