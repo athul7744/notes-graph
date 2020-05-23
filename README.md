@@ -16,4 +16,10 @@ npm install
 npm start
 ```
 
----
+## Credits and References
+
+- Text editor - [Editor.JS](https://github.com/codex-team/editor.js)
+- [Autosize](https://github.com/jackmoore/autosize)
+- Database - [Dexie.JS](https://github.com/dfahlander/Dexie.js)
+- Markdown Support - [Showdown](https://github.com/showdownjs/showdown)
+- Logger - [Winston](https://github.com/winstonjs/winston)
