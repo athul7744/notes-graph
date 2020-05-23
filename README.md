@@ -4,8 +4,6 @@ Bidirectionally Linked note taking app
 
 *Work In Progress*
 
----
-
 ## Installation Guide
 
 - Clone the repository
