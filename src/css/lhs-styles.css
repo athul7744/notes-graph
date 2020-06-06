@@ -1,0 +1,54 @@
+.lhs-panel {
+    float: left;
+    position: sticky;
+    top: 0px;
+    width: 19%;
+    max-width: 170px;
+    min-width: 150px;
+    height: 100%;
+    background-color: #142850;
+    color: #5C7079;
+}
+
+.lhs-header {
+    margin: 10px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.lhs-component {
+    margin: 5px 0px;
+}
+
+.lhs-component:hover {
+    background-color: #27496d;
+    transition: all 0.5s;
+}
+
+.lhs-btn {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 7px 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.lhs-btn:hover {
+    color: aliceblue;
+    transition: all 0.5s;
+}
+
+.lhs-btn-normal {
+    width: 68%;
+    padding-left: 10px;
+}
+
+.lhs-btn-small {
+    width: 15px;
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.lhs-border {
+    border-bottom: 1px solid lightblue;
+}
