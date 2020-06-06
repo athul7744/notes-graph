@@ -47,7 +47,7 @@ class RenderUtil {
      * @param {Boolean} destroy remove elements inside ID 
      * @returns {Boolean} true, if state changed
      */
-    renderMainHolder(id, destroy) {
+    renderMainHolder(id, destroy=true) {
         if (this.currentView == id){
             logger.log("Renderer.js : Same view!");
             return false;
