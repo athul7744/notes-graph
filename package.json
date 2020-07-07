@@ -13,7 +13,7 @@
     "winston-daily-rotate-file": "^4.4.2"
   },
   "devDependencies": {
-    "electron": "^8.2.0"
+    "electron": "^8.2.4"
   },
   "scripts": {
     "start": "electron ."
